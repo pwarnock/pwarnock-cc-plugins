@@ -1,6 +1,6 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "cc-plugins",
+  "name": "pwarnock-cc-plugins",
   "version": "1.0.0",
   "description": "Personal Claude Code plugin marketplace",
   "owner": {
