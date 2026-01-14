@@ -10,7 +10,7 @@
     {
       "name": "personal-crm",
       "description": "Capture meetups, contacts, and interactions from natural language into Notion CRM",
-      "source": { "source": "url", "url": "https://github.com/pwarnock/personal-crm" },
+      "source": "https://raw.githubusercontent.com/pwarnock/personal-crm/main/.claude-plugin/plugin.json",
       "version": "0.1.0",
       "homepage": "https://github.com/pwarnock/personal-crm"
     }
