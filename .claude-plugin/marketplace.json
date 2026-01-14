@@ -1,0 +1,17 @@
+{
+  "name": "claude-plugins",
+  "description": "Personal Claude Code plugin marketplace",
+  "owner": {
+    "name": "Peter Warnock",
+    "url": "https://github.com/pwarnock"
+  },
+  "plugins": [
+    {
+      "name": "personal-crm",
+      "description": "Capture meetups, contacts, and interactions from natural language into Notion CRM",
+      "source": "github:pwarnock/personal-crm",
+      "version": "0.1.0",
+      "homepage": "https://github.com/pwarnock/personal-crm"
+    }
+  ]
+}
