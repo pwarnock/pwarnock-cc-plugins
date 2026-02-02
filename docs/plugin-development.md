@@ -1,6 +1,16 @@
 # Plugin Development Guide
 
-Comprehensive guide to creating Claude Code plugins.
+> **For complete, always-current documentation:** Install the official `plugin-dev` plugin:
+> ```bash
+> /plugin install anthropic/plugin-dev
+> ```
+> Then use `plugin-dev:plugin-structure` for comprehensive guidance.
+>
+> This page is a **quick reference** - see [RESOURCES.md](./RESOURCES.md) for all documentation sources.
+
+---
+
+Quick reference guide for Claude Code plugin structure.
 
 ## Table of Contents
 

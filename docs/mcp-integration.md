@@ -1,6 +1,16 @@
 # MCP Integration Guide
 
-How to add Model Context Protocol (MCP) servers to Claude Code plugins.
+> **For complete, always-current documentation:** Install the official `plugin-dev` plugin:
+> ```bash
+> /plugin install anthropic/plugin-dev
+> ```
+> Then use `plugin-dev:mcp-integration` for comprehensive guidance.
+>
+> This page is a **quick reference** - see [RESOURCES.md](./RESOURCES.md) for all documentation sources.
+
+---
+
+Quick reference for adding MCP servers to Claude Code plugins.
 
 ## Table of Contents
 
