@@ -37,6 +37,12 @@
       "description": "GitHits MCP server - Search millions of code examples from open source repositories",
       "source": { "source": "url", "url": "https://github.com/pwarnock/githits-mcp.git" },
       "homepage": "https://github.com/pwarnock/githits-mcp"
+    },
+    {
+      "name": "gastown-parallel-workflow",
+      "description": "Bridge Gastown cross-session orchestration with in-session subagent parallelization",
+      "source": { "source": "local", "path": "/Users/peter/github/gastown-parallel-workflow" },
+      "homepage": "https://github.com/pwarnock/gastown-parallel-workflow"
     }
   ]
 }
