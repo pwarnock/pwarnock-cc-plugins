@@ -43,6 +43,12 @@
       "description": "Bridge Gastown cross-session orchestration with in-session subagent parallelization",
       "source": { "source": "url", "url": "https://github.com/pwarnock/gastown-parallel-workflow.git" },
       "homepage": "https://github.com/pwarnock/gastown-parallel-workflow"
+    },
+    {
+      "name": "prisma-skills",
+      "description": "Prisma 7 migration and best practices skills for Claude Code",
+      "source": { "source": "url", "url": "https://github.com/pwarnock/prisma-skills.git" },
+      "homepage": "https://github.com/pwarnock/prisma-skills"
     }
   ]
 }

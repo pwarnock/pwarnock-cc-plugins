@@ -26,6 +26,7 @@ This marketplace curates high-quality Claude Code plugins that solve real proble
 | [vercel-skills](https://github.com/pwarnock/vercel-skills) | Curated Vercel developer toolkit: React best practices, web design guidelines, browser automation, and deployment |
 | [githits-mcp](https://github.com/pwarnock/githits-mcp) | GitHits MCP server - Search millions of code examples from open source repositories |
 | [gastown-parallel-workflow](https://github.com/pwarnock/gastown-parallel-workflow) | Bridge Gastown cross-session orchestration with in-session subagent parallelization |
+| [prisma-skills](https://github.com/pwarnock/prisma-skills) | Prisma 7 migration and best practices skills for Claude Code |
 
 Each plugin may require environment variables. See individual plugin READMEs for setup.
 
