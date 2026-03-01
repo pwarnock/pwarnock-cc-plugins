@@ -49,6 +49,12 @@
       "description": "Prisma 7 migration and best practices skills for Claude Code",
       "source": { "source": "url", "url": "https://github.com/pwarnock/prisma-skills.git" },
       "homepage": "https://github.com/pwarnock/prisma-skills"
+    },
+    {
+      "name": "codified-context",
+      "description": "Three-tier persistent context infrastructure — constitution, routing intelligence, and cold memory",
+      "source": { "source": "url", "url": "https://github.com/pwarnock/codified-context.git" },
+      "homepage": "https://github.com/pwarnock/codified-context"
     }
   ]
 }
