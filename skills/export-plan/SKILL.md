@@ -184,6 +184,8 @@ The slug comes from `$ARGUMENTS` if provided, otherwise derive from the title (k
 
 After writing, show a brief summary: layer count, word count per layer, number of open questions surfaced.
 
+**STOP. This skill is complete after output.** Do NOT proceed to implement the plan, write code, create files beyond the proposal, or take any further action. The purpose of this skill is to produce a shareable document — not to execute what's in it. If the user wants to proceed with implementation, they will ask separately.
+
 ## Transformation Rules
 
 These rules govern how plan content maps to proposal content:
