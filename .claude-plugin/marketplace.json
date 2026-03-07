@@ -55,6 +55,12 @@
       "description": "Three-tier persistent context infrastructure — constitution, routing intelligence, and cold memory",
       "source": { "source": "url", "url": "https://github.com/pwarnock/codified-context.git" },
       "homepage": "https://github.com/pwarnock/codified-context"
+    },
+    {
+      "name": "progressive-disclosure",
+      "description": "Progressive disclosure methodology for LLM-consumed documents — three-tier lazy loading for any doc",
+      "source": { "source": "url", "url": "https://github.com/pwarnock/progressive-disclosure.git" },
+      "homepage": "https://github.com/pwarnock/progressive-disclosure"
     }
   ]
 }
