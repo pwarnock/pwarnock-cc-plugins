@@ -18,18 +18,59 @@ This marketplace curates high-quality Claude Code plugins that solve real proble
 
 ## Plugins
 
+<!-- PLUGINS:START -->
+### Integrations
+
 | Plugin | Description |
 |--------|-------------|
 | [personal-crm](https://github.com/pwarnock/personal-crm) | Capture meetups, contacts, and interactions from natural language into Notion CRM |
 | [Notion](https://github.com/makenotion/claude-code-notion-plugin) | Notion Skills + Notion MCP server packaged as a Claude Code plugin |
 | [kjbc](https://github.com/pwarnock/kjbc-mcp) | Strong's Concordance MCP - Grounded Greek/Hebrew word lookups for AI |
+
+### Developer Tools
+
+| Plugin | Description |
+|--------|-------------|
 | [vercel-skills](https://github.com/pwarnock/vercel-skills) | Curated Vercel developer toolkit: React best practices, web design guidelines, browser automation, and deployment |
-| [githits-mcp](https://github.com/pwarnock/githits-mcp) | GitHits MCP server - Search millions of code examples from open source repositories |
-| [gastown-parallel-workflow](https://github.com/pwarnock/gastown-parallel-workflow) | Bridge Gastown cross-session orchestration with in-session subagent parallelization |
 | [prisma-skills](https://github.com/pwarnock/prisma-skills) | Prisma 7 migration and best practices skills for Claude Code |
+
+### Workflow
+
+| Plugin | Description |
+|--------|-------------|
+| [gastown-parallel-workflow](https://github.com/pwarnock/gastown-parallel-workflow) | Bridge Gastown cross-session orchestration with in-session subagent parallelization |
+| [session-retro](https://github.com/pwarnock/session-retro) | Session retrospective skill with hook-driven prompting |
+
+### Knowledge & Context
+
+| Plugin | Description |
+|--------|-------------|
 | [codified-context](https://github.com/pwarnock/codified-context) | Three-tier persistent context infrastructure — constitution, routing intelligence, and cold memory |
+| [progressive-disclosure](https://github.com/pwarnock/progressive-disclosure) | Progressive disclosure methodology for LLM-consumed documents — three-tier lazy loading for any doc |
+
+### Search & Discovery
+
+| Plugin | Description |
+|--------|-------------|
+| [githits-mcp](https://github.com/pwarnock/githits-mcp) | GitHits MCP server - Search millions of code examples from open source repositories |
+<!-- PLUGINS:END -->
 
 Each plugin may require environment variables. See individual plugin READMEs for setup.
+
+## Marketplace Skills
+
+<!-- SKILLS:START -->
+| Skill | Description |
+|-------|-------------|
+| [codification-loop](skills/codification-loop/SKILL.md) | Use when capturing knowledge from conversations into durable context documents. |
+| [codified-context-patterns](skills/codified-context-patterns/SKILL.md) | Use when setting up or understanding the three-tier codified context framework for AI coding agents. |
+| [context-health](skills/context-health/SKILL.md) | Use when evaluating the quality and completeness of a project's codified context infrastructure. |
+| [create-plugin](skills/create-plugin/SKILL.md) | Use when creating a new Claude Code plugin. |
+| [export-plan](skills/export-plan/SKILL.md) | Use when the user wants to share a plan, proposal, or technical decision with their team. |
+| [find-docs](skills/find-docs/SKILL.md) | Help users find plugin development documentation and resources. |
+<!-- SKILLS:END -->
+
+See [SKILLS.md](SKILLS.md) for full details.
 
 ## Finding Documentation
 

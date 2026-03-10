@@ -11,60 +11,70 @@
     {
       "name": "personal-crm",
       "description": "Capture meetups, contacts, and interactions from natural language into Notion CRM",
+      "tags": ["integration", "workflow"],
       "source": { "source": "url", "url": "https://github.com/pwarnock/personal-crm.git" },
       "homepage": "https://github.com/pwarnock/personal-crm"
     },
     {
       "name": "Notion",
       "description": "Notion Skills + Notion MCP server packaged as a Claude Code plugin",
+      "tags": ["integration"],
       "source": { "source": "url", "url": "https://github.com/makenotion/claude-code-notion-plugin.git" },
       "homepage": "https://github.com/makenotion/claude-code-notion-plugin"
     },
     {
       "name": "kjbc",
       "description": "Strong's Concordance MCP - Grounded Greek/Hebrew word lookups for AI",
+      "tags": ["integration", "knowledge"],
       "source": { "source": "url", "url": "https://github.com/pwarnock/kjbc-mcp.git" },
       "homepage": "https://github.com/pwarnock/kjbc-mcp"
     },
     {
       "name": "vercel-skills",
       "description": "Curated Vercel developer toolkit: React best practices, web design guidelines, browser automation, and deployment",
+      "tags": ["dev-tools"],
       "source": { "source": "url", "url": "https://github.com/pwarnock/vercel-skills.git" },
       "homepage": "https://github.com/pwarnock/vercel-skills"
     },
     {
       "name": "githits-mcp",
       "description": "GitHits MCP server - Search millions of code examples from open source repositories",
+      "tags": ["search"],
       "source": { "source": "url", "url": "https://github.com/pwarnock/githits-mcp.git" },
       "homepage": "https://github.com/pwarnock/githits-mcp"
     },
     {
       "name": "gastown-parallel-workflow",
       "description": "Bridge Gastown cross-session orchestration with in-session subagent parallelization",
+      "tags": ["workflow"],
       "source": { "source": "url", "url": "https://github.com/pwarnock/gastown-parallel-workflow.git" },
       "homepage": "https://github.com/pwarnock/gastown-parallel-workflow"
     },
     {
       "name": "prisma-skills",
       "description": "Prisma 7 migration and best practices skills for Claude Code",
+      "tags": ["dev-tools"],
       "source": { "source": "url", "url": "https://github.com/pwarnock/prisma-skills.git" },
       "homepage": "https://github.com/pwarnock/prisma-skills"
     },
     {
       "name": "codified-context",
       "description": "Three-tier persistent context infrastructure — constitution, routing intelligence, and cold memory",
+      "tags": ["knowledge", "methodology"],
       "source": { "source": "url", "url": "https://github.com/pwarnock/codified-context.git" },
       "homepage": "https://github.com/pwarnock/codified-context"
     },
     {
       "name": "progressive-disclosure",
       "description": "Progressive disclosure methodology for LLM-consumed documents — three-tier lazy loading for any doc",
+      "tags": ["methodology", "knowledge"],
       "source": { "source": "url", "url": "https://github.com/pwarnock/progressive-disclosure.git" },
       "homepage": "https://github.com/pwarnock/progressive-disclosure"
     },
     {
       "name": "session-retro",
       "description": "Session retrospective skill with hook-driven prompting",
+      "tags": ["workflow"],
       "source": { "source": "url", "url": "https://github.com/pwarnock/session-retro.git" },
       "homepage": "https://github.com/pwarnock/session-retro"
     }

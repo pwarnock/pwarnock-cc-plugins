@@ -1,0 +1,8 @@
+{
+  "name": "pwarnock-cc-plugins",
+  "private": true,
+  "scripts": {
+    "sync-readme": "bun run scripts/sync-readme.ts",
+    "check-readme": "bun run scripts/sync-readme.ts --check"
+  }
+}
