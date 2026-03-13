@@ -1,6 +1,6 @@
 ---
 name: codified-context-patterns
-description: Use when setting up or understanding the three-tier codified context framework for AI coding agents. Provides the constitution template, trigger table format, failure modes format, and subsystem map format. Use when the user says "set up context", "create a constitution", "what is codified context", or wants to manually build persistent context infrastructure.
+description: Three-tier codified context framework for AI coding agents — constitution, trigger tables, failure modes, and subsystem map templates. Use when you say "set up context", "create a constitution", "what is codified context".
 version: 1.0.0
 ---
 

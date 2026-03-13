@@ -1,6 +1,6 @@
 ---
 name: find-docs
-description: Help users find plugin development documentation and resources. Use when asked "where do I find docs", "how do I learn plugin development", "where is the documentation", "find resources for plugins".
+description: Navigate Claude Code plugin development documentation and resources. Use when asked "where are the docs", "how do I learn plugin development", "find resources for plugins".
 ---
 
 # Finding Plugin Development Documentation

@@ -1,6 +1,6 @@
 ---
 name: export-plan
-description: Use when the user wants to share a plan, proposal, or technical decision with their team. Triggers on "/export-plan", "share this plan", "make this shareable", "write a proposal", "create an RFC", or when a plan needs to be communicated to non-agent audiences.
+description: Transform an agent execution plan into a team-ready proposal or RFC with adjustable depth and audience awareness. Use when you say "share this plan", "write a proposal", "create an RFC", "make this shareable".
 user_invocable: true
 ---
 

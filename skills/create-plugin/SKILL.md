@@ -1,6 +1,6 @@
 ---
 name: create-plugin
-description: Use when creating a new Claude Code plugin. Guides through plugin structure, manifest creation, and best practices. Trigger phrases "create a plugin", "new plugin", "build a Claude Code plugin", "scaffold a plugin"
+description: Scaffold a Claude Code plugin from scratch — guides through directory structure, manifest creation, and best practices. Use when you say "create a plugin", "new plugin", "build a plugin", "scaffold a plugin".
 ---
 
 # Create Claude Code Plugin

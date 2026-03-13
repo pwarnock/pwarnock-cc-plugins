@@ -62,12 +62,13 @@ Each plugin may require environment variables. See individual plugin READMEs for
 <!-- SKILLS:START -->
 | Skill | Description |
 |-------|-------------|
-| [codification-loop](skills/codification-loop/SKILL.md) | Use when capturing knowledge from conversations into durable context documents. |
-| [codified-context-patterns](skills/codified-context-patterns/SKILL.md) | Use when setting up or understanding the three-tier codified context framework for AI coding agents. |
-| [context-health](skills/context-health/SKILL.md) | Use when evaluating the quality and completeness of a project's codified context infrastructure. |
-| [create-plugin](skills/create-plugin/SKILL.md) | Use when creating a new Claude Code plugin. |
-| [export-plan](skills/export-plan/SKILL.md) | Use when the user wants to share a plan, proposal, or technical decision with their team. |
-| [find-docs](skills/find-docs/SKILL.md) | Help users find plugin development documentation and resources. |
+| [codification-loop](skills/codification-loop/SKILL.md) | Capture debugging insights, architecture decisions, and repeated explanations as durable project context. |
+| [codified-context-patterns](skills/codified-context-patterns/SKILL.md) | Three-tier codified context framework for AI coding agents — constitution, trigger tables, failure modes, and subsystem map templates. |
+| [context-health](skills/context-health/SKILL.md) | Score and evaluate your project's codified context infrastructure — rubrics for constitution, trigger tables, failure modes, and subsystem map quality. |
+| [create-plugin](skills/create-plugin/SKILL.md) | Scaffold a Claude Code plugin from scratch — guides through directory structure, manifest creation, and best practices. |
+| [export-plan](skills/export-plan/SKILL.md) | Transform an agent execution plan into a team-ready proposal or RFC with adjustable depth and audience awareness. |
+| [find-docs](skills/find-docs/SKILL.md) | Navigate Claude Code plugin development documentation and resources. |
+| [postmortem-writing](skills/postmortem-writing/SKILL.md) | Write effective blameless postmortems with root cause analysis, timelines, and action items. |
 <!-- SKILLS:END -->
 
 See [SKILLS.md](SKILLS.md) for full details.

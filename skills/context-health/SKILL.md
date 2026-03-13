@@ -1,6 +1,6 @@
 ---
 name: context-health
-description: Use when evaluating the quality and completeness of a project's codified context infrastructure. Provides rubrics for scoring constitution, trigger tables, failure modes, and subsystem map quality. Use when the user says "check context health", "how good is my context", "score my context", or during periodic maintenance reviews.
+description: Score and evaluate your project's codified context infrastructure — rubrics for constitution, trigger tables, failure modes, and subsystem map quality. Use when you say "check context health", "score my context".
 version: 1.0.0
 ---
 

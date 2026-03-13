@@ -1,6 +1,6 @@
 ---
 name: codification-loop
-description: Use when capturing knowledge from conversations into durable context documents. Implements the "explained it twice, write it down" methodology for AI coding agents. Use when the user says "write this down", "remember this", "codify this", or when you detect repeated explanations, debugging breakthroughs, or architecture decisions.
+description: Capture debugging insights, architecture decisions, and repeated explanations as durable project context. Implements the "explained it twice, write it down" methodology. Use when you say "write this down", "remember this", "codify this".
 version: 1.0.0
 ---
 

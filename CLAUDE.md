@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Personal Claude Code plugin marketplace.
+Personal Claude Code plugin marketplace & skills.
 
 ## Issue Tracking (Beads)
 
