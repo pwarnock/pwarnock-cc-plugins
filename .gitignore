@@ -1,6 +1,9 @@
 # Local Claude Code settings
 .claude/
 
+# Beads runtime files
+.beads/
+
 # Environment files
 .env
 .env.local
