@@ -49,3 +49,15 @@ Skills bundled with this marketplace. Install the marketplace to make them avail
 > Write effective blameless postmortems with root cause analysis, timelines, and action items.
 
 [Full skill →](skills/postmortem-writing/SKILL.md)
+
+# Community Skills
+
+Curated from the community — not authored here. See individual skills for attribution.
+
+## no-use-effect
+
+> Ban useEffect in React components — enforce derived state, event handlers, data-fetching hooks, key resets, and useMountEffect instead.
+>
+> *By [Alvin Ng](https://gist.github.com/alvinsng/5dd68c6ece355dbdbd65340ec2927b1d)*
+
+[Full skill →](community-skills/no-use-effect/SKILL.md)

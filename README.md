@@ -73,6 +73,16 @@ Each plugin may require environment variables. See individual plugin READMEs for
 
 See [SKILLS.md](SKILLS.md) for full details.
 
+## Community Skills
+
+Curated from the community. See individual skills for attribution.
+
+<!-- COMMUNITY-SKILLS:START -->
+| Skill | Description | Author |
+|-------|-------------|--------|
+| [no-use-effect](community-skills/no-use-effect/SKILL.md) | Ban useEffect in React components — enforce derived state, event handlers, data-fetching hooks, key resets, and useMountEffect instead. | [Alvin Ng](https://gist.github.com/alvinsng/5dd68c6ece355dbdbd65340ec2927b1d) |
+<!-- COMMUNITY-SKILLS:END -->
+
 ## Finding Documentation
 
 ### Want to create a plugin?

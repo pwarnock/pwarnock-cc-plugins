@@ -15,6 +15,7 @@ const MARKETPLACE_PATH = join(ROOT, ".claude-plugin", "marketplace.json");
 const README_PATH = join(ROOT, "README.md");
 const SKILLS_MD_PATH = join(ROOT, "SKILLS.md");
 const SKILLS_DIR = join(ROOT, "skills");
+const COMMUNITY_SKILLS_DIR = join(ROOT, "community-skills");
 
 const CHECK_MODE = process.argv.includes("--check");
 
@@ -31,6 +32,11 @@ interface Skill {
   name: string;
   description: string;
   dirName: string;
+}
+
+interface CommunitySkill extends Skill {
+  author: string;
+  source: string;
 }
 
 // ── Tag → display category mapping ─────────────────────────────────────
@@ -64,30 +70,38 @@ function readMarketplaceJson(): Plugin[] {
   }));
 }
 
-function readSkillFrontmatter(): Skill[] {
-  if (!existsSync(SKILLS_DIR)) return [];
+function scanSkillDir(dir: string): Array<{ dirName: string; frontmatter: Record<string, string> }> {
+  if (!existsSync(dir)) return [];
 
-  const dirs = readdirSync(SKILLS_DIR, { withFileTypes: true })
+  return readdirSync(dir, { withFileTypes: true })
     .filter((d) => d.isDirectory())
     .map((d) => d.name)
-    .sort();
+    .sort()
+    .flatMap((dirName) => {
+      const skillPath = join(dir, dirName, "SKILL.md");
+      if (!existsSync(skillPath)) return [];
+      const frontmatter = parseFrontmatter(readFileSync(skillPath, "utf-8"));
+      if (!frontmatter.name || !frontmatter.description) return [];
+      return [{ dirName, frontmatter }];
+    });
+}
 
-  const skills: Skill[] = [];
-  for (const dirName of dirs) {
-    const skillPath = join(SKILLS_DIR, dirName, "SKILL.md");
-    if (!existsSync(skillPath)) continue;
+function readSkillFrontmatter(): Skill[] {
+  return scanSkillDir(SKILLS_DIR).map(({ dirName, frontmatter }) => ({
+    name: frontmatter.name,
+    description: frontmatter.description,
+    dirName,
+  }));
+}
 
-    const content = readFileSync(skillPath, "utf-8");
-    const frontmatter = parseFrontmatter(content);
-    if (frontmatter.name && frontmatter.description) {
-      skills.push({
-        name: frontmatter.name,
-        description: frontmatter.description,
-        dirName,
-      });
-    }
-  }
-  return skills;
+function readCommunitySkillFrontmatter(): CommunitySkill[] {
+  return scanSkillDir(COMMUNITY_SKILLS_DIR).map(({ dirName, frontmatter }) => ({
+    name: frontmatter.name,
+    description: frontmatter.description,
+    dirName,
+    author: frontmatter.author ?? "Unknown",
+    source: frontmatter.source ?? "",
+  }));
 }
 
 function parseFrontmatter(content: string): Record<string, string> {
@@ -174,7 +188,23 @@ function generateSkillSection(skills: Skill[]): string {
   return lines.join("\n");
 }
 
-function generateSkillsPage(skills: Skill[]): string {
+function generateCommunitySkillSection(skills: CommunitySkill[]): string {
+  const lines: string[] = [];
+  lines.push("| Skill | Description | Author |");
+  lines.push("|-------|-------------|--------|");
+  for (const s of skills) {
+    const desc = firstSentence(s.description);
+    const authorLink = s.source
+      ? `[${s.author}](${s.source})`
+      : s.author;
+    lines.push(
+      `| [${s.name}](community-skills/${s.dirName}/SKILL.md) | ${desc} | ${authorLink} |`,
+    );
+  }
+  return lines.join("\n");
+}
+
+function generateSkillsPage(skills: Skill[], communitySkills: CommunitySkill[]): string {
   const lines: string[] = [];
   lines.push("<!-- AUTO-GENERATED — do not edit manually. Run: bun run sync-readme -->");
   lines.push("");
@@ -196,6 +226,27 @@ function generateSkillsPage(skills: Skill[]): string {
     lines.push("");
     lines.push(`[Full skill →](skills/${s.dirName}/SKILL.md)`);
     lines.push("");
+  }
+
+  if (communitySkills.length > 0) {
+    lines.push("# Community Skills");
+    lines.push("");
+    lines.push("Curated from the community — not authored here. See individual skills for attribution.");
+    lines.push("");
+
+    for (const s of communitySkills) {
+      const authorLink = s.source
+        ? `[${s.author}](${s.source})`
+        : s.author;
+      lines.push(`## ${s.name}`);
+      lines.push("");
+      lines.push(`> ${firstSentence(s.description)}`);
+      lines.push(`>`);
+      lines.push(`> *By ${authorLink}*`);
+      lines.push("");
+      lines.push(`[Full skill →](community-skills/${s.dirName}/SKILL.md)`);
+      lines.push("");
+    }
   }
 
   return lines.join("\n");
@@ -229,15 +280,18 @@ function updateFileSection(
 function main() {
   const plugins = readMarketplaceJson();
   const skills = readSkillFrontmatter();
+  const communitySkills = readCommunitySkillFrontmatter();
 
   const pluginMd = generatePluginSection(plugins);
   const skillTableMd = generateSkillSection(skills);
-  const skillsPageMd = generateSkillsPage(skills);
+  const communitySkillTableMd = generateCommunitySkillSection(communitySkills);
+  const skillsPageMd = generateSkillsPage(skills, communitySkills);
 
   // Update README.md
   let readme = readFileSync(README_PATH, "utf-8");
   readme = updateFileSection(readme, "<!-- PLUGINS:START -->", "<!-- PLUGINS:END -->", pluginMd);
   readme = updateFileSection(readme, "<!-- SKILLS:START -->", "<!-- SKILLS:END -->", skillTableMd);
+  readme = updateFileSection(readme, "<!-- COMMUNITY-SKILLS:START -->", "<!-- COMMUNITY-SKILLS:END -->", communitySkillTableMd);
 
   if (CHECK_MODE) {
     const currentReadme = readFileSync(README_PATH, "utf-8");
