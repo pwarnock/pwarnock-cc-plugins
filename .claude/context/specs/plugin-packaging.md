@@ -1,34 +1,23 @@
 # Plugin Packaging
 
-> On-demand spec loaded when entering `.claude-plugin/` subsystem
+> On-demand spec for marketplace-facing plugin metadata and install artifacts.
 
-## Overview
+## Scope
 
-Plugin packaging covers the metadata and distribution files needed to publish a Claude Code plugin to the marketplace.
+- Load this spec when editing `.claude-plugin/` or publish-ready metadata.
 
-## Structure
+## Key files
 
-```
-.claude-plugin/
-  manifest.json     # Plugin metadata and entry points
-  README.md         # Plugin documentation
-```
+- `.claude-plugin/`
+- Plugin manifests and packaging metadata
+- Publish descriptors and install metadata
 
-## Manifest Fields
+## Conventions
 
-Key fields in `manifest.json`:
-- `name` — unique plugin identifier
-- `version` — semver version string
-- `description` — short plugin description
-- `entrypoint` — main script or binary
+- Keep packaging metadata aligned with the skill source files.
+- Regenerate derived descriptors instead of editing them by hand.
+- Ensure plugin names and slugs match across publish surfaces.
 
-## Publishing
+## Related routing
 
-See `specs/publishing.md` for the full release and tagging workflow.
-
-## Validation
-
-Before publishing:
-- Verify `manifest.json` is valid JSON
-- Confirm `version` matches the git tag
-- Ensure `README.md` is up to date
+- `.claude-plugin/**` file-pattern route in `trigger-tables.md`

@@ -1,34 +1,24 @@
-# Docs Subsystem
+# Documentation
 
-> On-demand spec loaded when entering `docs/` subsystem
+> On-demand spec for user-facing guides, roadmaps, and reference material.
 
-## Overview
+## Scope
 
-The `docs/` directory contains guides, roadmaps, and reference documentation for the project.
+- Load this spec when editing docs under `docs/` or long-form markdown outside the generated indexes.
 
-## Structure
+## Key files
 
-```
-docs/
-  CROSS_PLATFORM_SKILLS_ROADMAP.md   # Multi-platform strategy
-  ...                                 # Other guides
-```
+- `docs/`
+- `README.md`
+- `CLAUDE.md`
 
 ## Conventions
 
-- Documentation files use Markdown (`.md`)
-- File names use kebab-case or SCREAMING_SNAKE_CASE for prominent docs
-- Keep docs accurate — stale docs are worse than no docs
-- Reference code, not copy it (link to source files instead of duplicating)
+- Keep docs accurate, concise, and linked to source-of-truth files.
+- Avoid duplicating generated tables or indexes in multiple places.
+- Prefer stable headings so links and automation remain reliable.
+- Update docs when workflows or routing rules change.
 
-## Maintenance
+## Related routing
 
-- Run `/audit-staleness` to check if docs have drifted from reality
-- Update docs as part of the same PR as the feature/change they describe
-- The root `README.md` is auto-generated — see `specs/generated-assets.md`
-
-## Adding New Docs
-
-1. Create a `.md` file in `docs/`
-2. Link to it from `README.md` or an index doc
-3. Reference it from `trigger-tables.md` if keyword routing is useful
+- `docs/**` and `*.md` file-pattern routes in `trigger-tables.md`

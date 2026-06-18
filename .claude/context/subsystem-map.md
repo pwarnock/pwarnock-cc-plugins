@@ -2,6 +2,8 @@
 
 > Maps directories to logical subsystems with ownership, dependencies, and documentation links. Used for routing (trigger tables), staleness detection, and coverage analysis.
 
+The `Spec Document` paths below point to files under `.claude/context/specs/`.
+
 ## Subsystem Overview
 
 ```

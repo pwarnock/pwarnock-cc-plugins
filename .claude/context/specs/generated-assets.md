@@ -1,33 +1,25 @@
 # Generated Assets
 
-> On-demand spec loaded when keywords: "generated", "sync-readme", "auto-generated"
+> On-demand spec for files that are derived from source manifests or sync scripts.
 
-## Overview
+## Scope
 
-Some files in this repository are auto-generated from source-of-truth documents. Editing them directly will result in changes being overwritten.
+- Load this spec when editing generated indexes, tables, or sync outputs.
 
-## Generated Files
+## Source of truth
 
-| File | Generated From | Script |
-|------|---------------|--------|
-| `README.md` (root) | Individual plugin READMEs / template | `bun run sync-readme` |
+- `skills/*/SKILL.md`
+- `skills.sh.json`
+- `docs/` source articles and tables
+- `scripts/sync-readme.ts`
 
-## Rules
+## Conventions
 
-- **Never hand-edit generated files** — changes will be overwritten on next sync
-- **Edit the source** — make changes in the source-of-truth document instead
-- **Regenerate** — run the appropriate script to propagate changes
+- Edit the source file, then regenerate the derived asset.
+- Never hand-edit generated README/index tables.
+- Use `bun run sync-readme` to refresh the generated marketplace index.
+- Use `bun run check-readme` to verify the generated output is current.
 
-## Checking for Drift
+## Related routing
 
-```bash
-bun run check-readme   # verify README is in sync with source
-bun run sync-readme    # regenerate README from source
-```
-
-## Adding New Generated Assets
-
-1. Define the source-of-truth file
-2. Add a generation script to `package.json`
-3. Document the mapping in this spec
-4. Add a `check-*` script for CI validation
+- `generated`, `sync-readme`, or `auto-generated` keyword matches in `trigger-tables.md`

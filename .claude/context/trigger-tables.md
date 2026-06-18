@@ -2,6 +2,14 @@
 
 > Routing intelligence: maps file patterns and keywords to the right agent, skill, or context document. The AI agent consults this table to decide which specialist to invoke.
 
+All `specs/*.md` targets listed below exist under `.claude/context/specs/`.
+
+## Routing Precedence
+
+1. Evaluate file-pattern rows top to bottom.
+2. More specific directory patterns win over generic extension matches.
+3. If multiple rows match, use the first matching row.
+
 ## File Pattern Routing
 
 | File Pattern | Keywords | Agent/Skill | Rationale |

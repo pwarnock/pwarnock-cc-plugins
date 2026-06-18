@@ -1,26 +1,26 @@
-# Publishing & Release Procedures
+# Publishing
 
-> On-demand spec loaded when keywords: "publish", "release", "tag", "version"
+> On-demand spec for releases, tags, and public distribution updates.
 
-## Overview
+## Scope
 
-This document covers the release and publishing workflow for plugins and skills in this repository.
+- Load this spec when making release decisions or updating publish-facing metadata.
 
-## Release Process
+## Key files
 
-1. **Version bump** — Update version in the relevant manifest/package file.
-2. **Tag** — Create a git tag matching the version (e.g., `v1.2.3`).
-3. **Push tag** — `git push origin <tag>`
-4. **GitHub Release** — Create a GitHub release from the tag with a changelog.
-
-## Plugin Publishing
-
-- Plugin metadata lives in `.claude-plugin/`
-- Verify `manifest.json` or equivalent is updated before tagging
-- See `specs/plugin-packaging.md` for packaging details
+- `README.md`
+- `SKILLS.md`
+- `skills.sh.json`
+- `.claude-plugin/`
+- `.github/`
 
 ## Conventions
 
-- Use semantic versioning (`MAJOR.MINOR.PATCH`)
-- Tag format: `v{version}` (e.g., `v1.0.0`)
-- Changelog entries go in `CHANGELOG.md` or GitHub Release notes
+- Keep publish-facing descriptions short, accurate, and versioned.
+- Sync repository metadata before release or publication.
+- Prefer explicit commits and tags over implied state.
+- Treat marketplace discovery as a separate concern from local editing.
+
+## Related routing
+
+- `"publish"`, `"release"`, `"tag"`, `"version"` keyword matches in `trigger-tables.md`

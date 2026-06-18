@@ -12,17 +12,15 @@ only when entering the relevant subsystem — keeping the always-loaded context 
 
 ## Current Specs
 
-| File | Subsystem | Trigger Keywords |
-|------|-----------|-----------------|
-| `beads.md` | `.beads/` | "beads", "bd", "issue tracking" |
-| `codified-context.md` | `.claude/` | "context", "constitution", "trigger table" |
-| `community-skills.md` | `community-skills/` | community, contributed, curated |
-| `docs.md` | `docs/` | documentation, readme, guide |
-| `generated-assets.md` | `scripts/` | "generated", "sync-readme", "auto-generated" |
-| `github-automation.md` | `.github/` | workflow, action, release, CI |
-| `plugin-packaging.md` | `.claude-plugin/` | plugin, marketplace, publish |
-| `publishing.md` | (cross-cutting) | "publish", "release", "tag", "version" |
-| `scripts.md` | `scripts/` | sync, generator, automation, script |
-| `skills-marketplace.md` | `skills/` | "skill", "skills.sh", "manifest" |
-| `skills.md` | `skills/` | skill, SKILL.md, manifest, frontmatter |
-| `templates.md` | `templates/` | template, scaffold, boilerplate |
+- `beads.md`
+- `codified-context.md`
+- `community-skills.md`
+- `docs.md`
+- `generated-assets.md`
+- `github-automation.md`
+- `plugin-packaging.md`
+- `publishing.md`
+- `scripts.md`
+- `skills-marketplace.md`
+- `skills.md`
+- `templates.md`

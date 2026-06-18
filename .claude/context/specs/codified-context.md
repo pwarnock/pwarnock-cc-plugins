@@ -1,29 +1,27 @@
-# Codified Context Protocol
+# Codified Context
 
-> On-demand spec loaded when keywords: "context", "constitution", "trigger table"
+> On-demand spec for the bootstrap context infrastructure itself.
 
-## Overview
+## Scope
 
-Codified context is a system for keeping AI agent context lean, accurate, and maintainable. Instead of loading all documentation every session, context is loaded on-demand based on file patterns and keywords.
+- Root: `.claude/`
+- Load this spec when updating constitution, trigger tables, failure modes, or subsystem maps.
 
-## Key Files
+## Key files
 
-| File | Purpose |
-|------|---------|
-| `constitution.md` | Always-loaded project conventions and constraints |
-| `trigger-tables.md` | File pattern → agent/skill routing rules |
-| `failure-modes.md` | Known failure symptom → cause → fix mappings |
-| `subsystem-map.md` | Directory → subsystem ownership |
-| `specs/` | On-demand subsystem documentation |
+- `.claude/context/constitution.md`
+- `.claude/context/trigger-tables.md`
+- `.claude/context/failure-modes.md`
+- `.claude/context/subsystem-map.md`
 
-## How It Works
+## Conventions
 
-1. **Always-loaded** — `constitution.md` is loaded every session
-2. **On-demand** — `specs/*.md` files are loaded only when entering the relevant subsystem or detecting keywords
-3. **Routing** — `trigger-tables.md` maps files/keywords to the right specialist agent
+- Keep the constitution concise and link to deeper specs when needed.
+- Update routing and failure tables when new patterns emerge.
+- Use the `audit-staleness` skill to check for drift.
+- Use the `codify-knowledge` skill to capture repeated discoveries.
 
-## Maintenance
+## Related routing
 
-- Run `/audit-staleness` to check for context drift
-- Run `/codify-knowledge` to capture session insights into spec files
-- Update `trigger-tables.md` when new routing rules are discovered
+- `.claude/**` in `trigger-tables.md`
+- `CLAUDE.md` repository guidance

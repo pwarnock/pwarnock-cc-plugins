@@ -1,37 +1,21 @@
-# Templates Subsystem
+# Scaffolding Templates
 
-> On-demand spec loaded when entering `templates/` subsystem
+> On-demand spec for reusable starter content and boilerplate.
 
-## Overview
+## Scope
 
-The `templates/` directory contains scaffold templates used to generate new plugins, skills, and other artifacts.
+- Load this spec when editing files under `templates/` or creating new skeleton content.
 
-## Structure
+## Key files
 
-```
-templates/
-  {template-name}/
-    ...               # Template files
-```
+- `templates/`
 
 ## Conventions
 
-- Templates are the source of truth for new artifact structure
-- Template files may use placeholder tokens (e.g., `{{name}}`, `{{version}}`)
-- Do not add business logic to templates — keep them structural only
-- Update templates when conventions change
+- Keep templates generic and easy to specialize.
+- Update templates when new source-of-truth patterns appear.
+- Avoid embedding repo-specific state in boilerplate unless intentional.
 
-## Using a Template
+## Related routing
 
-Templates are typically invoked via a scaffolding skill or script:
-```bash
-# Example (actual command depends on implementation)
-bunx scaffold --template plugin-template --name my-plugin
-```
-
-## Adding a New Template
-
-1. Create a directory under `templates/`
-2. Add template files with appropriate placeholder tokens
-3. Document placeholder tokens in a `TEMPLATE.md` file
-4. Wire up to a scaffolding script or skill if appropriate
+- `templates/**` file-pattern route in `trigger-tables.md`

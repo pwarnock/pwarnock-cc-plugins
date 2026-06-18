@@ -1,37 +1,25 @@
-# Beads Issue Tracking
+# Beads Workflow
 
-> On-demand spec loaded when keywords: "beads", "bd", "issue tracking"
+> On-demand spec for issue tracking, sync state, and local beads metadata.
 
-## Overview
+## Scope
 
-This repo uses **beads** (`bd`) for issue tracking. Issues are stored in `.beads/` as structured data and synced to a remote dolt database.
+- Root: `.beads/`
+- Load this spec when touching issue state, local sync data, or beads config.
 
-## Common Commands
+## Key files
 
-```bash
-bd prime              # Load workflow context for the session
-bd list               # Show open issues
-bd ready              # Issues ready to work (prioritized)
-bd show <id>          # View issue details
-bd update <id> --status in_progress  # Claim work
-bd close <id>         # Mark complete
-bd dolt push          # Push beads data to remote
-```
+- `.beads/config.yaml`
+- `.beads/metadata.json`
+- `.beads/embeddeddolt/`
 
-## Issue ID Format
+## Conventions
 
-Issues use the prefix `mkt-` followed by a number (e.g., `mkt-001`).
+- Treat `bd` commands as the source of truth for issue state.
+- Use `bd dolt push` to sync beads data.
+- Avoid manual edits to internal database artifacts.
 
-## Workflow
+## Related routing
 
-1. Run `bd prime` at the start of each session for context
-2. Use `bd ready` to find prioritized work
-3. Claim with `bd update <id> --status in_progress`
-4. Complete with `bd close <id>`
-5. Always run `bd dolt push` before ending the session
-
-## Sync State
-
-- Beads data lives in `.beads/`
-- Remote sync uses dolt — run `bd dolt push` (not `bd sync`)
-- Version: beads 1.0.5+
+- `.beads/**` in `trigger-tables.md`
+- `.claude/context/subsystem-map.md`

@@ -1,33 +1,23 @@
 # Community Skills
 
-> On-demand spec loaded when entering `community-skills/` subsystem
+> On-demand spec for curated or imported skills that are not first-party owned.
 
-## Overview
+## Scope
 
-Community skills are contributed or curated skills imported from external sources. They live in `community-skills/` and follow the same structure as first-party skills.
+- Load this spec when working in `community-skills/` or reviewing external skill attribution.
 
-## Structure
+## Key files
 
-```
-community-skills/
-  {skill-name}/
-    SKILL.md          # Frontmatter metadata + description
-    ...               # Implementation files
-```
-
-## Curation Process
-
-1. **Triage** — Evaluate the skill for quality and safety
-2. **Normalize** — Ensure frontmatter meets local conventions
-3. **Import** — Copy to `community-skills/{skill-name}/`
-4. **Document** — Note the source in `SKILL.md` or a `SOURCE.md` file
+- `community-skills/**/SKILL.md`
+- `community-skills/**/README.md`
+- Attribution or curation notes inside `community-skills/`
 
 ## Conventions
 
-- Attribute the original author in `SKILL.md` frontmatter
-- Do not modify behavior without forking and renaming
-- Community skills are not guaranteed to be maintained
+- Preserve attribution and upstream references.
+- Keep curation notes separate from first-party skill content.
+- Treat imported skills as read-only unless intentionally forking them.
 
-## Routing
+## Related routing
 
-Community skill changes trigger `community-curation-specialist` via `trigger-tables.md`.
+- `community-skills/**` file-pattern route in `trigger-tables.md`

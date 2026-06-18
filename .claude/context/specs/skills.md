@@ -1,43 +1,25 @@
-# Skills Subsystem
+# First-party Skills
 
-> On-demand spec loaded when entering `skills/` subsystem
+> On-demand spec for the skill bundles stored under `skills/`.
 
-## Overview
+## Scope
 
-The `skills/` directory contains first-party reusable agent skills. Skills are self-contained behaviors that can be invoked by agents or users.
+- Load this spec when editing skill markdown, skill metadata, or skill-specific assets.
 
-## Structure
+## Key files
 
-```
-skills/
-  {skill-name}/
-    SKILL.md          # Required: frontmatter metadata + description
-    ...               # Implementation files (scripts, prompts, etc.)
-```
-
-## SKILL.md Frontmatter
-
-```yaml
----
-name: skill-name
-description: One-line description of what this skill does
-triggers:
-  - keyword or phrase that activates this skill
-version: 1.0.0
----
-```
+- `skills/**/SKILL.md`
+- `skills.sh.json`
+- `README.md`
+- `SKILLS.md`
 
 ## Conventions
 
-- Each skill is self-contained in its own subdirectory
-- `SKILL.md` is required and must have valid frontmatter
-- Skills should be focused — do one thing well
-- Implementation files should be documented inline
+- Keep skill slugs kebab-case and stable.
+- Treat the skill markdown as the installable source of truth.
+- Update marketplace grouping whenever skills are added or renamed.
+- Keep generated listing tables in sync with the source skill set.
 
-## Authoring a New Skill
+## Related routing
 
-1. Create `skills/{skill-name}/`
-2. Add `SKILL.md` with frontmatter
-3. Add implementation files
-4. Add keyword routing to `trigger-tables.md` if needed
-5. Update `specs/skills-marketplace.md` if the skill is marketplace-relevant
+- `skills/**` file-pattern route in `trigger-tables.md`

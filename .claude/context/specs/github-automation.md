@@ -1,35 +1,23 @@
 # GitHub Automation
 
-> On-demand spec loaded when entering `.github/` subsystem
+> On-demand spec for CI, release, and repository workflow automation.
 
-## Overview
+## Scope
 
-GitHub automation covers workflows, actions, and release pipelines defined in `.github/`.
+- Load this spec when editing GitHub Actions, release helpers, or repo automation.
 
-## Workflow Files
+## Key files
 
-Workflow YAML files live in `.github/workflows/`. Common workflows:
-- CI checks (lint, test, build)
-- Release automation (tag → GitHub Release)
-- PR validation
+- `.github/workflows/`
+- `.github/`
+- `scripts/` helpers used by workflows
 
 ## Conventions
 
-- Workflow file names use kebab-case: `release.yml`, `check-readme.yml`
-- Use `actions/checkout@v4` for checkout steps
-- Pin action versions to a SHA or major version tag for security
-- Secrets are accessed via `${{ secrets.SECRET_NAME }}`
+- Keep workflow steps explicit and deterministic.
+- Prefer repo-local scripts over large inline shell blocks.
+- Update workflow docs when automation changes.
 
-## Release Workflow
+## Related routing
 
-Releases are typically triggered by pushing a version tag (`v*`). The workflow:
-1. Checks out the tag
-2. Builds/packages the artifact
-3. Creates a GitHub Release
-
-## Adding a New Workflow
-
-1. Create a `.yml` file in `.github/workflows/`
-2. Define triggers (`on:`) and jobs
-3. Reference secrets from repository/org settings
-4. Document the workflow purpose in a comment at the top
+- `.github/**` file-pattern route in `trigger-tables.md`

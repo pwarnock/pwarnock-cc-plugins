@@ -1,30 +1,22 @@
-# Scripts & Automation
+# Automation Scripts
 
-> On-demand spec loaded when entering `scripts/` subsystem
+> On-demand spec for sync scripts, generators, and repo tooling.
 
-## Overview
+## Scope
 
-The `scripts/` directory contains automation scripts for tasks like syncing generated assets, scaffolding, and build helpers.
+- Load this spec when editing `scripts/` or adding repo automation.
 
-## Available Scripts
+## Key files
 
-Scripts in `scripts/` are typically invoked via `package.json`:
-
-```bash
-bun run sync-readme    # Regenerate root README from sources
-bun run check-readme   # Verify README is in sync (used in CI)
-```
+- `scripts/sync-readme.ts`
+- Future generator or validation scripts in `scripts/`
 
 ## Conventions
 
-- Scripts use TypeScript (`.ts`) unless shell is more appropriate
-- Scripts are invoked via `bun` or `bunx`
-- Generated output should have a paired `check-*` script for CI validation
-- Scripts should be idempotent where possible
+- Keep scripts small and purpose-built.
+- Fail fast when source manifests are missing or invalid.
+- Prefer explicit input/output paths so regeneration is reproducible.
 
-## Adding a New Script
+## Related routing
 
-1. Create the script in `scripts/`
-2. Add an entry to `package.json` scripts
-3. If the script generates output, add a `check-*` variant
-4. Document the script in this spec and in `specs/generated-assets.md` if applicable
+- `scripts/**` and `*.ts` file-pattern routes in `trigger-tables.md`

@@ -12,12 +12,12 @@
 
 | Layer | Technology | Version |
 |-------|-----------|---------|
-| Language | TypeScript (run via Bun) + Markdown | |
-| Runtime | Bun | |
+| Language | TypeScript + Markdown | not pinned |
+| Runtime | Bun | not pinned |
 | Framework | N/A (docs/skills repository) | |
 | Database | N/A | |
-| Package Manager | Bun | |
-| Testing | N/A (no automated test suite configured) | |
+| Package Manager | bun | not pinned |
+| Testing | bun run check-readme | scripted check |
 
 ## 3. Conventions & Standards
 
@@ -33,30 +33,19 @@
 # Install dependencies
 bun install
 
-# Development
-# Not detected — update when established
-bun run dev
+# Refresh generated README/index
+bun run sync-readme
 
-# Build
-# Not detected — update when established
-bun run build
+# Verify generated README/index are current
+bun run check-readme
 
-# Test
-# Not detected — update when established
-bun test
-
-# Lint
-# Not detected — update when established
-bun run lint
-
-# Type check
-# Not detected — update when established
-bun run typecheck
+# Development / build / lint / type check
+# Not defined in package.json
 ```
 
 ## 5. Architectural Summary
 
-This repository is a curated skills and plugin ecosystem. `skills/` contains the first-party skill bundles, while `community-skills/` captures shared or contributed skill content. `docs/` carries roadmaps, guides, and reference material, and `scripts/` is where automation belongs for sync and generation tasks. `.claude-plugin/` and `.github/` hold packaging and release automation, while `.beads/` records issue tracking and sync state. The root `skills.sh.json` drives skills.sh page grouping and discovery.
+This repository is a curated skills and plugin ecosystem. `skills/` contains the first-party skill bundles, while `community-skills/` captures shared or contributed skill content. `docs/` carries roadmaps, guides, and reference material, and `scripts/` is where automation belongs for sync and generation tasks. `.claude-plugin/` and `.github/` hold packaging and release automation, while `.beads/` records issue tracking and sync state. The main generated artifact is the marketplace README, which is rebuilt from source manifests rather than edited by hand. The root `skills.sh.json` drives skills.sh page grouping and discovery.
 
 **Key architectural decisions:**
 - Skills and docs are the product; generated indexes should come from source content.
@@ -68,10 +57,10 @@ This repository is a curated skills and plugin ecosystem. `skills/` contains the
 ## 6. Operational Checklists
 
 ### Before committing
-- [ ] Tests pass (`bun test`)
-- [ ] Linter clean (`bun run lint`)
+- [ ] README/index check passes (`bun run check-readme`)
+- [ ] Generated docs refreshed if source changed (`bun run sync-readme`)
 - [ ] No secrets in staged files
-- [ ] Type check passes (`bun run typecheck`)
+- [ ] Generated markdown reviewed for accidental drift
 
 ### Before deploying
 - [ ] All CI checks green
@@ -81,7 +70,7 @@ This repository is a curated skills and plugin ecosystem. `skills/` contains the
 ### When adding a new skill
 - [ ] Create `skills/<skill-name>/SKILL.md` with kebab-case slug
 - [ ] Update `skills.sh.json` grouping and any publish metadata
-- [ ] Regenerate the generated index/README (`bun run sync-readme` or equivalent)
+- [ ] Regenerate the generated index/README (`bun run sync-readme`)
 
 ## 7. Known Failure Modes
 
@@ -97,9 +86,10 @@ This repository is a curated skills and plugin ecosystem. `skills/` contains the
 > See `trigger-tables.md` for the complete routing table.
 
 **Key routing rules:**
+- Routing follows the order in `trigger-tables.md`; the first matching row wins.
+- More specific directory patterns outrank generic extension matches like `*.md`.
 - Files matching `skills/**` or `skills.sh.json` → use `skill-authoring-specialist`
 - Files matching `docs/**` or `*.md` → use `docs-specialist`
-- Files matching `scripts/**` or `*.ts` automation → use `automation-specialist`
 - Files matching `.claude/**` → use `context-architect`
 
 ## 9. Codification Protocol

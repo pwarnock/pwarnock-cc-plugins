@@ -42,6 +42,6 @@ This project uses codified context infrastructure. Key files:
 - `.claude/context/subsystem-map.md` — Directory → subsystem ownership
 - `.claude/context/specs/` — On-demand subsystem documentation
 
-> Run `/audit-staleness` to check for context drift. Run `/codify-knowledge` to capture session insights.
+> Use the `audit-staleness` skill to check for context drift. Use the `codify-knowledge` skill to capture session insights.
 
 <!-- codified-context bootstrap: 2026-06-18 -->
