@@ -43,7 +43,7 @@
 
 ## How to Use This Table
 
-1. **On file open/edit**: Match the file path against "File Pattern Routing" → invoke the matched agent/skill
+1. **On file open/edit**: Match the file path against "File Pattern Routing" (use the *first* matching row; keep the table ordered most-specific → least-specific) → invoke the matched agent/skill
 2. **On keyword detection**: Match conversation keywords against "Keyword Routing" → load the specified context
 3. **On subsystem entry**: When working in a subsystem directory → load the matching spec document
 
