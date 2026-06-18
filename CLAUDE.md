@@ -32,3 +32,16 @@ Audit findings tracked across 3 plugins:
 - `personal-crm` - P0: API payload format bug
 - `gastown-parallel-workflow` - P1: missing .mcp.json
 - `kjbc-mcp` - P2-P4: tests, validation, docs
+
+## Context Infrastructure
+
+This project uses codified context infrastructure. Key files:
+- `.claude/context/constitution.md` — Core project conventions (loaded every session)
+- `.claude/context/trigger-tables.md` — File pattern → agent/skill routing
+- `.claude/context/failure-modes.md` — Known failure symptom → cause → fix mappings
+- `.claude/context/subsystem-map.md` — Directory → subsystem ownership
+- `.claude/context/specs/` — On-demand subsystem documentation
+
+> Run `/audit-staleness` to check for context drift. Run `/codify-knowledge` to capture session insights.
+
+<!-- codified-context bootstrap: 2026-06-18 -->

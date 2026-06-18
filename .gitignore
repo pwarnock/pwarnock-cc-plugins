@@ -1,5 +1,7 @@
 # Local Claude Code settings
-.claude/
+.claude/*
+!.claude/context/
+!.claude/context/**
 
 # Beads runtime files
 .beads/
