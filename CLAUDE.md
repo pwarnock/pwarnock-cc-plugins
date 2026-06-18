@@ -1,6 +1,10 @@
 # CLAUDE.md
 
-Personal Claude Code plugin marketplace & skills.
+Personal Claude Code plugin marketplace & skills—part of broader **multi-platform agent skills ecosystem**.
+
+## Strategic Direction
+
+See [CROSS_PLATFORM_SKILLS_ROADMAP.md](docs/CROSS_PLATFORM_SKILLS_ROADMAP.md) for multi-platform strategy, rebrand planning, and advocacy initiatives.
 
 ## Issue Tracking (Beads)
 

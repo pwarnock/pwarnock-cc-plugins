@@ -2,6 +2,10 @@
 
 This project uses **bd** (beads) for issue tracking. Run `bd onboard` to get started.
 
+## Strategic Context
+
+This repository is evolving from Claude Code plugins to a **multi-platform agent skills ecosystem**. See [CROSS_PLATFORM_SKILLS_ROADMAP.md](docs/CROSS_PLATFORM_SKILLS_ROADMAP.md) for vision and phases.
+
 ## Quick Reference
 
 ```bash
