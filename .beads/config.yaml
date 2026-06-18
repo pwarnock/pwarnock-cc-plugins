@@ -65,3 +65,7 @@
 # - linear.api-key
 # - github.org
 # - github.repo
+
+federation.remote: "git+ssh://git@github.com/pwarnock/pwarnock-cc-plugins.git"
+
+sync.remote: "git+ssh://git@github.com/pwarnock/pwarnock-cc-plugins.git"

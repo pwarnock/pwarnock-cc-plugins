@@ -7,12 +7,13 @@ Personal Claude Code plugin marketplace & skills.
 This repo uses beads for issue tracking (prefix: `mkt`).
 
 ```bash
+bd prime                 # workflow context
 bd list                  # show open issues
 bd ready                 # issues ready to work (prioritized)
 bd show mkt-xxx          # issue details
 bd update mkt-xxx --status in_progress  # claim work
 bd close mkt-xxx         # mark complete
-bd sync                  # sync with git
+bd dolt push             # push beads data to remote
 ```
 
 ## Structure
