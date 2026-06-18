@@ -12,12 +12,12 @@
 
 | Layer | Technology | Version |
 |-------|-----------|---------|
-| Language | TypeScript + Markdown | 5.x |
-| Runtime | Bun | 1.x |
+| Language | TypeScript (run via Bun) + Markdown | |
+| Runtime | Bun | |
 | Framework | N/A (docs/skills repository) | |
 | Database | N/A | |
-| Package Manager | bun | |
-| Testing | None detected | |
+| Package Manager | Bun | |
+| Testing | N/A (no automated test suite configured) | |
 
 ## 3. Conventions & Standards
 
