@@ -12,4 +12,17 @@ only when entering the relevant subsystem — keeping the always-loaded context 
 
 ## Current Specs
 
-(empty — add spec documents as subsystems mature)
+| File | Subsystem | Trigger Keywords |
+|------|-----------|-----------------|
+| `beads.md` | `.beads/` | "beads", "bd", "issue tracking" |
+| `codified-context.md` | `.claude/` | "context", "constitution", "trigger table" |
+| `community-skills.md` | `community-skills/` | community, contributed, curated |
+| `docs.md` | `docs/` | documentation, readme, guide |
+| `generated-assets.md` | `scripts/` | "generated", "sync-readme", "auto-generated" |
+| `github-automation.md` | `.github/` | workflow, action, release, CI |
+| `plugin-packaging.md` | `.claude-plugin/` | plugin, marketplace, publish |
+| `publishing.md` | (cross-cutting) | "publish", "release", "tag", "version" |
+| `scripts.md` | `scripts/` | sync, generator, automation, script |
+| `skills-marketplace.md` | `skills/` | "skill", "skills.sh", "manifest" |
+| `skills.md` | `skills/` | skill, SKILL.md, manifest, frontmatter |
+| `templates.md` | `templates/` | template, scaffold, boilerplate |
