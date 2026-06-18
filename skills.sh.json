@@ -1,0 +1,31 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "Context Engineering",
+      "description": "Build durable, AI-ready project knowledge and infrastructure.",
+      "skills": [
+        "codification-loop",
+        "codified-context-patterns",
+        "context-health"
+      ]
+    },
+    {
+      "title": "Plugin Development",
+      "description": "Scaffold and guide Copilot CLI plugin creation.",
+      "skills": [
+        "create-plugin",
+        "find-docs"
+      ]
+    },
+    {
+      "title": "Documentation & Communication",
+      "description": "Write effective documentation and process guides.",
+      "skills": [
+        "postmortem-writing",
+        "export-plan"
+      ]
+    }
+  ]
+}
