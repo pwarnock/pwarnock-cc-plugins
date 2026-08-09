@@ -50,6 +50,12 @@ Skills bundled with this marketplace. Install the marketplace to make them avail
 
 [Full skill →](skills/postmortem-writing/SKILL.md)
 
+## writing-delegation-briefs
+
+> Use when about to hand a task to Claude or a subagent and a one-line prompt won't be enough — when the delegatee needs context, judgment, or guardrails to succeed.
+
+[Full skill →](skills/writing-delegation-briefs/SKILL.md)
+
 # Community Skills
 
 Curated from the community — not authored here. See individual skills for attribution.

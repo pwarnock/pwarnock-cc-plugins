@@ -69,6 +69,7 @@ Each plugin may require environment variables. See individual plugin READMEs for
 | [export-plan](skills/export-plan/SKILL.md) | Transform an agent execution plan into a team-ready proposal or RFC with adjustable depth and audience awareness. |
 | [find-docs](skills/find-docs/SKILL.md) | Navigate Claude Code plugin development documentation and resources. |
 | [postmortem-writing](skills/postmortem-writing/SKILL.md) | Write effective blameless postmortems with root cause analysis, timelines, and action items. |
+| [writing-delegation-briefs](skills/writing-delegation-briefs/SKILL.md) | Use when about to hand a task to Claude or a subagent and a one-line prompt won't be enough — when the delegatee needs context, judgment, or guardrails to succeed. |
 <!-- SKILLS:END -->
 
 See [SKILLS.md](SKILLS.md) for full details.
